@@ -7,14 +7,24 @@
         <title>Admin Dashboard</title>
         <!-- Bootstrap CSS -->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Custom CSS -->
+
         <style>
             body {
                 font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
             }
 
             .navbar {
                 background-color: #007bff;
+                position: sticky;
+                top: 0;
+                width: 100%;
+                z-index: 1000;
+                /*to ensure navbar stays top*/
             }
 
             .navbar-brand {
@@ -39,20 +49,11 @@
                 width: 100%;
                 border-radius: 20px;
                 padding-right: 40px;
-                /* Space for the icon */
+                /*space for the icon */
             }
 
             .form-control::placeholder {
                 color: #a4a1a1;
-            }
-
-            .search-icon {
-                position: absolute;
-                right: 10px;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 20px;
-                height: 20px;
             }
 
             .profile-info {
@@ -63,7 +64,7 @@
             .profile-info img {
                 border-radius: 50%;
                 width: 40px;
-                /*profile image size*/
+                /* profile image size */
                 height: 40px;
                 margin-right: 10px;
             }
@@ -72,36 +73,103 @@
                 color: #fff;
                 font-size: 0.875rem;
             }
+
+            /* Sidebar Styles */
+            aside {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 250px;
+                background-color: #f8f9fa;
+                padding: 15px;
+                height: calc(100vh - 56px);
+                /* full height minus the height of the navbar */
+                position: fixed;
+                left: 0;
+                top: 56px;
+                /* height of the navbar */
+                border-right: 1px solid #ddd;
+            }
+
+            .content {
+                margin-left: 250px;
+                /* same width as the sidebar */
+                padding: 20px;
+                color: grey;
+
+            }
+
+            /* sidebar navigation items spacing */
+            .nav-item {
+                margin-bottom: 10px;
+            }
+
+            .nav-link.active {
+                font-weight: bold;
+            }
         </style>
     </head>
 
     <body>
-
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#">
-                <img src="logo2.jpg" alt="Company Logo">
+                <img src="logo.jpg" alt="Company Logo">
                 Company Title
             </a>
 
-            <!-- Middle: Search bar -->
+            <!--Search bar -->
             <form class="form-inline px-2">
                 <div style="position: relative;">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <!--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                        <path
-                            d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z">
-                        </path>
-                    </svg>-->
                 </div>
             </form>
 
-            <!-- Right side: Profile image and name -->
             <div class="ml-auto profile-info">
                 <img src="user-img4.jpg" alt="Profile Image">
                 <span>Last Name, First Name</span>
             </div>
         </nav>
 
+        <aside>
+            <!-- Sidebar Menu -->
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Components</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Forms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tables</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Charts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Icons</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing Tables</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="content">
+            <h5>Dashboard</h5>
+            <p style="font-size: small;">Home / Dashboard</p>
+        </div>
 
     </body>
 
