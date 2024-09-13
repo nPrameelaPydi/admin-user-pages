@@ -89,12 +89,14 @@ aside {
 .box-container {
     display: flex;
     gap: 10px;
+    padding-top: 10px;
 }
 
 .box {
+
     width: 150px;
     height: 150px;
-    background-color: #007bff;
+    /*background-color: #007bff;*/
     border: 1px solid #000;
 }
 
