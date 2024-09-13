@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User Page</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="admin.css">
+        <link rel="stylesheet" href="user.css">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">
+                <img src="logo.jpg" alt="Company Logo">
+                Company Title
+            </a>
+
+            <!--Search bar -->
+            <form class="form-inline px-2">
+                <div>
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                </div>
+            </form>
+
+            <div class="ml-auto profile-info">
+                <img src="user-img4.jpg" alt="Profile Image">
+                <span>Last Name, First Name</span>
+            </div>
+        </nav>
+
+        <aside>
+            <!-- Sidebar Menu -->
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Components</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Forms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tables</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Charts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Icons</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing Tables</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="content">
+            <h5>Profile</h5>
+            <p style="font-size: small;">Home / Users / Profile</p>
+            <div class="container">
+                <div class="flex-1">
+                    <div class="profile">
+                        <div class="user-image">
+                            <img src="user-icon.png" alt="">
+                        </div>
+                        <p style="margin-top: 10px;margin-bottom: 0px;">Last Name, First Name</p>
+                        <p style="font-size: small;margin-top: 0px;padding-top: 0px;margin-bottom: 30px;">Web Designer
+                        </p>
+                        <div class="social-media">
+                            <a href="#" class="social-icon">FB</a>
+                            <a href="#" class="social-icon">TW</a>
+                            <a href="#" class="social-icon">IG</a>
+                            <a href="#" class="social-icon">LN</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-3">
+                    <!-- Navbar -->
+                    <nav class="navbar">
+                        <ul>
+                            <li><a href="#">Overview</a></li>
+                            <li><a href="#">Edit Profile</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Change Password</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Content below navbar -->
+                    <div class="content">
+                        <section class="about">
+                            <h4>About</h4>
+                            <p style="font-size: small;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Vivamus lacinia odio vitae
+                                vestibulum. Nullam vel arcu nec nulla auctor auctor.</p>
+                        </section>
+
+                        <section class="profile-details">
+                            <h4>Profile Details</h4>
+                            <form style="font-size: small;">
+                                <div class="form-row">
+                                    <label for="fullname">Full Name:</label>
+                                    <input type="text" id="fullname" name="fullname" required>
+                                </div>
+
+                                <div class="form-row">
+                                    <label for="company">Company:</label>
+                                    <input type="text" id="company" name="company">
+                                </div>
+
+                                <div class="form-row">
+                                    <label for="job">Job:</label>
+                                    <input type="text" id="job" name="job">
+                                </div>
+
+                                <div class="form-row">
+                                    <label for="country">Country:</label>
+                                    <input type="text" id="country" name="country">
+                                </div>
+
+                                <div class="form-row">
+                                    <label for="address">Address:</label>
+                                    <input type="text" id="address" name="address">
+                                </div>
+
+                                <div class="form-row">
+                                    <label for="phone">Phone:</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+
+                                <div class="form-row">
+                                    <label for="email">Email Address:</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+
+                                <button type="submit">Save Changes</button>
+                            </form>
+                        </section>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </body>
+
+
+</html>
